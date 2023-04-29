@@ -70,7 +70,7 @@ public class WhatsappRepository {
     }
 
     public int sendMessage(Message message, User sender, Group group) throws Exception {
-        if(!groupUserMap.containsKey(group))
+        if(groupUserMap.containsKey(group))
         {
             List<User> l= groupUserMap.get(group);
             if(l.contains(sender))
